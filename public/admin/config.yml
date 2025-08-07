@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["film", "game", "commercial", "short"]}
+      - {label: "Year", name: "year", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Project Link", name: "link", widget: "string", required: false}
+      - {label: "SoundCloud ID", name: "soundcloud", widget: "string", required: false}
+      - {label: "Awards", name: "awards", widget: "list", required: false}
