@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useEffect, useState } from 'react';
 import AboutSection from './AboutSection'
 import ContactSection from './ContactSection'
 
@@ -17,6 +18,29 @@ export default function HomePage({ projects, gallery, settings }) {
   const filteredProjects = sortedProjects.filter(p => 
     filter === 'all' || p.category === filter
   )
+
+ useEffect(() => {
+    const sections = ['portfolio', 'about', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean)
+    const links = Array.from(document.querySelectorAll('.nav-links a'))
+
+    const onScroll = () => {
+      const y = window.scrollY + 100 // offset for fixed nav
+      let current = 'portfolio'
+      sections.forEach(sec => {
+        if (sec.offsetTop <= y) current = sec.id
+      })
+      links.forEach(a => {
+        const href = a.getAttribute('href')
+        a.classList.toggle('active', href === `#${current}`)
+      })
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // Handle card click to redirect to external URL
   const handleCardClick = (url) => {
