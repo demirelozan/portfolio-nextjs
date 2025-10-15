@@ -9,6 +9,12 @@
     "lint": "next lint",      
     "export": "next export"
   },
+
+  {
+  "engines": {
+    "node": "20.x"
+  }
+},
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "14.0.4",
