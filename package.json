@@ -1,13 +1,14 @@
 {
-  "name": "ozandemirel-portfolio",
-  "version": "1.0.0",
+  "name": "portfolio-nextjs",
+  "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "export": "next export"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",      
+    "export": "next export"
+  },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "14.0.4",
