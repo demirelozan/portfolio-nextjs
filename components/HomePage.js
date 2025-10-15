@@ -58,7 +58,7 @@ const filteredProjects = sortedProjects.filter(
         <div className="hero-wrap">
           <div className="hero-photo">
             {/* swap src for your exact asset if you prefer */}
-            <img src="https://imgur.com/scMnEuD" alt="Ozan Demirel" />
+            <img src="https://i.imgur.com/scMnEuD.jpeg" alt="Ozan Demirel" />
           </div>
           <div className="hero-text">
             <h1 className="hero-heading">Ozan Demirel</h1>
