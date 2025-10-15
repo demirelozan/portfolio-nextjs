@@ -5,6 +5,22 @@ import { useState } from 'react'
 export default function HomePage({ projects, gallery, settings }) {
   const [filter, setFilter] = useState('all')
   
+  // Sort projects to put featured ones first
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.featured && !b.featured) return -1
+    if (!a.featured && b.featured) return 1
+    return 0
+  })
+  
+  const filteredProjects = sortedProjects.filter(p => 
+    filter === 'all' || p.category === filter
+  )
+
+  // Handle card click to redirect to external URL
+  const handleCardClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+  
   return (
     <div>
       <nav>
@@ -26,7 +42,17 @@ export default function HomePage({ projects, gallery, settings }) {
           <div className="hero-text">
             <h1>{settings.title}</h1>
             <p className="subtitle">Film & Media Composer</p>
-            <p>{settings.bio}</p>
+            <p>Creating emotional soundscapes that bring stories to life through music. Specializing in orchestral and electronic fusion for films, games, and commercials.</p>
+            <ul>
+              <li>Film, TV & Game Composer</li>
+              <li>Orchestral Scoring</li>
+              <li>Sound Design</li>
+            </ul>
+            <div className="social-links">
+              <a href={settings.soundcloud} target="_blank" rel="noopener noreferrer">SoundCloud</a>
+              <a href={settings.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href={`mailto:${settings.email}`}>Email</a>
+            </div>
           </div>
         </div>
       </section>
@@ -59,40 +85,44 @@ export default function HomePage({ projects, gallery, settings }) {
           >
             Commercial
           </button>
-          <button 
-            className={filter === 'short' ? 'filter-btn active' : 'filter-btn'}
-            onClick={() => setFilter('short')}
-          >
-            Short Film
-          </button>
         </div>
 
         <div className="project-grid">
-          {projects
-            .filter(p => filter === 'all' || p.category === filter)
-            .map(project => (
-              <div key={project.id} className="project-card">
-                <div className="project-image-wrapper">
-                  <img 
-                    src={project.image || 'https://via.placeholder.com/400x260/1a1a1a/f59e0b?text=' + project.title} 
-                    alt={project.title} 
-                    className="project-image"
-                  />
-                </div>
-                <div className="project-info">
-                  <span className="project-category">{project.category}</span>
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  {project.awards && project.awards.length > 0 && (
-                    <div className="project-awards">
-                      {project.awards.map((award, i) => (
-                        <span key={i} className="award-badge">🏆 {award}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
+          {filteredProjects.map(project => (
+            <div 
+              key={project.id} 
+              className={`project-card ${project.featured ? 'featured' : ''}`}
+              onClick={() => handleCardClick(project.link)}
+              style={{ cursor: 'pointer' }}
+            >
+              <div className="project-image-wrapper">
+                <img 
+                  src={project.image || 'https://via.placeholder.com/400x260/1a1a1a/f59e0b?text=' + project.title} 
+                  alt={project.title} 
+                  className="project-image"
+                />
+                {project.featured && (
+                  <div className="featured-badge">Featured</div>
+                )}
               </div>
-            ))}
+              <div className="project-info">
+                <div className="project-meta">
+                  <span className="project-category">{project.category}</span>
+                  <span className="project-year">{project.year}</span>
+                </div>
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                {project.awards && project.awards.length > 0 && (
+                  <div className="project-awards">
+                    {project.awards.map((award, i) => (
+                      <span key={i} className="award-badge">🏆 {award}</span>
+                    ))}
+                  </div>
+                )}
+                <span className="view-project">View Project →</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
