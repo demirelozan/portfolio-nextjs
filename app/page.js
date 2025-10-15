@@ -2,14 +2,14 @@ import HomePage from '../components/HomePage'
 
 // Updated projects data with your new additions
 const projects = [
-  // Featured project - Fragments (will appear first)
+  // Featured project - Fragments 
   {
     id: 1,
     title: "Fragments (Kesit)",
     category: "film",
-    year: "2024",
+    year: "2025",
     description: "Original score for the award-winning short film Fragments, a socioeconomical and political standing from the eyes of the youth.",
-    image: "/uploads/fragments.jpg", // You'll upload this image
+    image: "/uploads/fragments.jpg",
     awards: ["Best Music - Athens Film Festival", "Official Selection"],
     link: "https://filmfreeway.com/Kesit_",
     soundcloud: null,
@@ -19,9 +19,9 @@ const projects = [
     id: 2,
     title: "The Interface",
     category: "game",
-    year: "2024",
+    year: "2022",
     description: "Complete soundtrack for The Interface game, featuring atmospheric electronic compositions and dynamic adaptive music systems.",
-    image: "/uploads/interface.jpg", // You'll upload this image
+    image: "/uploads/interface.jpg", 
     awards: [],
     link: "https://soundcloud.com/ozan-417880832/sets/interface-game-soundtracks",
     soundcloud: null
@@ -30,9 +30,9 @@ const projects = [
     id: 3,
     title: "Carbondale",
     category: "film",
-    year: "2024",
+    year: "2023",
     description: "Atmosperic orchestral score for the short film Carbondale, for the narrative scene the train departs.",
-    image: "/uploads/carbondale.jpg", // You'll upload this image
+    image: "/uploads/carbondale.jpeg",
     awards: [],
     link: "https://soundcloud.com/ozan-417880832/carbondale-short-film-soundtrack",
     soundcloud: null

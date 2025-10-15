@@ -184,7 +184,7 @@ const filteredProjects = sortedProjects.filter(
       <ContactSection />
 
       <footer>
-        <p>&copy; 2024 {settings.title}. All rights reserved.</p>
+        <p>&copy; 2025 {settings.title}. All rights reserved.</p>
       </footer>
 
       <a href="/admin" className="admin-btn">Admin Panel</a>
