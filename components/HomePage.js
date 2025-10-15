@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-
+import AboutSection from './AboutSection'
+import ContactSection from './ContactSection'
+'
 export default function HomePage({ projects, gallery, settings }) {
   const [filter, setFilter] = useState('all')
   
@@ -17,6 +19,8 @@ export default function HomePage({ projects, gallery, settings }) {
           </ul>
         </div>
       </nav>
+
+      {/* ...hero... */}
 
       <section className="hero">
         <div className="hero-content">
@@ -95,6 +99,10 @@ export default function HomePage({ projects, gallery, settings }) {
             ))}
         </div>
       </section>
+
+      {/* NEW: about + contact */}
+      <AboutSection />
+      <ContactSection />
 
       <footer>
         <p>&copy; 2024 {settings.title}. All rights reserved.</p>
