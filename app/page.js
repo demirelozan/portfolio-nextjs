@@ -8,7 +8,7 @@ const projects = [
     title: "Fragments (Kesit)",
     category: "film",
     year: "2024",
-    description: "Original score for the award-winning short film Fragments, exploring themes of memory and identity through haunting musical landscapes.",
+    description: "Original score for the award-winning short film Fragments, a socioeconomical and political standing from the eyes of the youth.",
     image: "/uploads/fragments.jpg", // You'll upload this image
     awards: ["Best Music - Athens Film Festival", "Official Selection"],
     link: "https://filmfreeway.com/Kesit_",
@@ -31,7 +31,7 @@ const projects = [
     title: "Carbondale",
     category: "film",
     year: "2024",
-    description: "Emotional orchestral score for the short film Carbondale, weaving together narrative themes with character-driven melodies.",
+    description: "Atmosperic orchestral score for the short film Carbondale, for the narrative scene the train departs.",
     image: "/uploads/carbondale.jpg", // You'll upload this image
     awards: [],
     link: "https://soundcloud.com/ozan-417880832/carbondale-short-film-soundtrack",
