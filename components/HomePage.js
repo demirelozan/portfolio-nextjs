@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import AboutSection from './AboutSection'
 import ContactSection from './ContactSection'
-'
+
 export default function HomePage({ projects, gallery, settings }) {
   const [filter, setFilter] = useState('all')
   
