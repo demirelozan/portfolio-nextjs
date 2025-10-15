@@ -58,7 +58,7 @@ const filteredProjects = sortedProjects.filter(
         <div className="hero-wrap">
           <div className="hero-photo">
             {/* swap src for your exact asset if you prefer */}
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop" alt="Ozan Demirel" />
+            <img src="https://imgur.com/scMnEuD" alt="Ozan Demirel" />
           </div>
           <div className="hero-text">
             <h1 className="hero-heading">Ozan Demirel</h1>
@@ -74,15 +74,15 @@ const filteredProjects = sortedProjects.filter(
             </ul>
             <div className="hero-socials">
               {/* SoundCloud */}
-              <a href="https://soundcloud.com/your-handle" aria-label="SoundCloud" target="_blank" rel="noreferrer">
+              <a href="https://soundcloud.com/ozan-417880832" aria-label="SoundCloud" target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24"><path d="M17 9a4 4 0 0 0-3.4 1.9A3 3 0 0 0 8 13H6a3 3 0 0 0 0 6h11a4 4 0 0 0 0-8Z"/></svg>
               </a>
               {/* Instagram */}
-              <a href="https://instagram.com/your-handle" aria-label="Instagram" target="_blank" rel="noreferrer">
+              <a href="https://instagram.com/ozandemirl" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7Zm6-1.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3Z"/></svg>
               </a>
               {/* Email */}
-              <a href="mailto:ozandemirel.music@gmail.com" aria-label="Email">
+              <a href="mailto:ozndemirel@gmail.com" aria-label="Email">
                 <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="m3 5 9 7 9-7"/></svg>
               </a>
             </div>
