@@ -7,6 +7,17 @@ import ContactSection from './ContactSection'
 export default function HomePage({ projects = [], gallery = [], settings = {} }) {
   const [filter, setFilter] = useState('all')
 
+// sort + filter the incoming projects for the grid
+const sortedProjects = [...projects].sort((a, b) => {
+  if (a.featured && !b.featured) return -1
+  if (!a.featured && b.featured) return 1
+  return 0
+})
+const filteredProjects = sortedProjects.filter(
+  (p) => filter === 'all' || p.category === filter
+)
+
+
   // Scroll spy for nav underline
   useEffect(() => {
     const ids = ['portfolio','about','contact']
