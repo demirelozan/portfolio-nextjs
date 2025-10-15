@@ -406,4 +406,34 @@ grid-template-columns: 1fr;
 .gallery-slide {
 height: 300px;
 }
+
+/* About → Skills */
+.skills-section { margin-top: 3rem; }
+.skills-section h3 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+.skill-item {
+  padding: 1rem;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.skill-item:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+}
+
 }
