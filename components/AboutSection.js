@@ -6,7 +6,8 @@ export default function AboutSection() {
       <h2 className="section-title">About</h2>
       <div className="about-content">
         <h2>Ozan Demirel</h2>
-        <p className="tagline">Composer &amp; Sound Designer</p>
+	<p className="tagline hero-sub">Composer &amp; Sound Designer</p>
+
 
         <p>
           I'm a passionate composer specializing in combining western &amp; eastern soundscapes
