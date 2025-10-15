@@ -1,31 +1,65 @@
 import HomePage from '../components/HomePage'
 
-// Dummy data for now
+// Updated projects data with your new additions
 const projects = [
+  // Featured project - Fragments (will appear first)
   {
     id: 1,
-    title: "Your First Film",
+    title: "Fragments (Kesit)",
     category: "film",
     year: "2024",
-    description: "Add your project description here",
-    image: "/uploads/project1.jpg",
-    awards: ["Best Score"],
-    link: "#",
-    soundcloud: "123456789"
+    description: "Original score for the award-winning short film Fragments, exploring themes of memory and identity through haunting musical landscapes.",
+    image: "/uploads/fragments.jpg", // You'll upload this image
+    awards: ["Best Music - Athens Film Festival", "Official Selection"],
+    link: "https://filmfreeway.com/Kesit_",
+    soundcloud: null,
+    featured: true // This marks it as featured
+  },
+  {
+    id: 2,
+    title: "The Interface",
+    category: "game",
+    year: "2024",
+    description: "Complete soundtrack for The Interface game, featuring atmospheric electronic compositions and dynamic adaptive music systems.",
+    image: "/uploads/interface.jpg", // You'll upload this image
+    awards: [],
+    link: "https://soundcloud.com/ozan-417880832/sets/interface-game-soundtracks",
+    soundcloud: null
+  },
+  {
+    id: 3,
+    title: "Carbondale",
+    category: "film",
+    year: "2024",
+    description: "Emotional orchestral score for the short film Carbondale, weaving together narrative themes with character-driven melodies.",
+    image: "/uploads/carbondale.jpg", // You'll upload this image
+    awards: [],
+    link: "https://soundcloud.com/ozan-417880832/carbondale-short-film-soundtrack",
+    soundcloud: null
   }
 ]
 
 const gallery = [
   {
     title: "Studio Session",
-    image: "/uploads/gallery1.jpg",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=500&fit=crop",
     description: "Recording session"
+  },
+  {
+    title: "Live Performance",
+    image: "https://i.imgur.com/JYoqcZb.jpeg",
+    description: "Live performance"
+  },
+  {
+    title: "Studio Setup",
+    image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=1200&h=500&fit=crop",
+    description: "My creative workspace"
   }
 ]
 
 const settings = {
   title: "Ozan Demirel",
-  profileImage: "https://i.imgur.com/Kxi8Kyi.jpg",
+  profileImage: "https://i.imgur.com/scMnEuD.jpeg",
   bio: "Film & Media Composer",
   soundcloud: "https://soundcloud.com/ozan-417880832",
   instagram: "https://instagram.com/ozandemirl",
