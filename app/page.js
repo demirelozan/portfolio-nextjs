@@ -1,8 +1,7 @@
 import HomePage from '../components/HomePage'
 
-// Updated projects data with your new additions
 const projects = [
-  // Featured project - Fragments 
+  // Featured project - Fragments
   {
     id: 1,
     title: "Fragments (Kesit)",
@@ -12,11 +11,33 @@ const projects = [
     image: "/uploads/fragments.jpg",
     awards: ["Best Music - Athens Film Festival", "Official Selection"],
     link: "https://filmfreeway.com/Kesit_",
-    // ── Add your files to public/compositions/fragments/ ──
-    wavFile: "/compositions/fragments/audio.wav",       // your .wav file
-    sheetFiles: ["/compositions/fragments/sheet.pdf"],  // PDF  — or use JPGs: ["sheet-p1.jpg","sheet-p2.jpg"]
-    sheetType: "pdf",                                   // "pdf" or "jpg"
+    // Place your files at:
+    //   public/compositions/fragments/audio.wav
+    //   public/compositions/fragments/sheet.pdf
+    wavFile: "/compositions/fragments/audio.wav",
+    sheetFiles: ["/compositions/fragments/sheet.pdf"],
+    sheetType: "pdf",
     featured: true
+  },
+  // Residues — standalone concert piece
+  {
+    id: 4,
+    title: "Residues",
+    category: "concert",
+    year: "2024",
+    description: "Chamber composition for upright piano, two violins, viola, violoncello, and contrabass. An introspective piece exploring texture and silence.",
+    // Place your cover image at: public/compositions/residues/cover.jpg
+    // (export page 1 of the PDF as a JPG and put it here)
+    image: "/compositions/residues/cover.jpg",
+    awards: [],
+    link: null,
+    // Place your files at:
+    //   public/compositions/residues/audio.wav
+    //   public/compositions/residues/Residues.pdf
+    wavFile: "/compositions/residues/audio.wav",
+    sheetFiles: ["/compositions/residues/Residues.pdf"],
+    sheetType: "pdf",
+    featured: false
   },
   {
     id: 2,
@@ -24,25 +45,23 @@ const projects = [
     category: "game",
     year: "2022",
     description: "Complete soundtrack for The Interface game, featuring atmospheric electronic compositions and dynamic adaptive music systems.",
-    image: "/uploads/interface.jpg", 
+    image: "/uploads/interface.jpg",
     awards: [],
     link: "https://soundcloud.com/ozan-417880832/sets/interface-game-soundtracks",
-    soundcloud: null
   },
   {
     id: 3,
     title: "Carbondale",
     category: "film",
     year: "2023",
-    description: "Atmosperic orchestral score for the short film Carbondale, for the narrative scene the train departs.",
+    description: "Atmospheric orchestral score for the short film Carbondale, for the narrative scene the train departs.",
     image: "/uploads/carbondale.jpeg",
     awards: [],
     link: "https://soundcloud.com/ozan-417880832/carbondale-short-film-soundtrack",
-    // To add audio+sheets here too, uncomment and fill in:
+    // Uncomment to add audio + sheets here too:
     // wavFile: "/compositions/carbondale/audio.wav",
     // sheetFiles: ["/compositions/carbondale/sheet.pdf"],
     // sheetType: "pdf",
-    soundcloud: null
   }
 ]
 

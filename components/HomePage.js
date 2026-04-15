@@ -144,6 +144,12 @@ const filteredProjects = sortedProjects.filter(
           >
             Commercial
           </button>
+          <button 
+            className={filter === 'concert' ? 'filter-btn active' : 'filter-btn'}
+            onClick={() => setFilter('concert')}
+          >
+            Concert
+          </button>
         </div>
 
         <div className="project-grid">
