@@ -10,7 +10,7 @@ const projects = [
     description: "Original score for the award-winning short film Fragments, a socioeconomical and political standing from the eyes of the youth.",
     image: "/uploads/fragments.jpg",
     awards: ["Best Music - Athens Film Festival", "Official Selection"],
-    link: "https://filmfreeway.com/Kesit_",
+    link: "https://vimeo.com/1148621700",
     // Place your files at:
     //   public/compositions/fragments/audio.wav
     //   public/compositions/fragments/sheet.pdf
