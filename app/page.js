@@ -14,8 +14,6 @@ const projects = [
     // Place your files at:
     //   public/compositions/fragments/audio.wav
     //   public/compositions/fragments/sheet.pdf
-    wavFile: "/compositions/fragments/audio.wav",
-    sheetFiles: ["/compositions/fragments/sheet.pdf"],
     sheetType: "pdf",
     featured: true
   },
@@ -24,7 +22,7 @@ const projects = [
     id: 4,
     title: "Residues",
     category: "concert",
-    year: "2024",
+    year: "2026",
     description: "Chamber composition for upright piano, two violins, viola, violoncello, and contrabass. An introspective piece exploring texture and silence.",
     // Place your cover image at: public/compositions/residues/cover.jpg
     // (export page 1 of the PDF as a JPG and put it here)
@@ -32,9 +30,9 @@ const projects = [
     awards: [],
     link: null,
     // Place your files at:
-    //   public/compositions/residues/audio.wav
+    //   public/compositions/residues/Residues.wav
     //   public/compositions/residues/Residues.pdf
-    wavFile: "/compositions/residues/audio.wav",
+    wavFile: "/compositions/residues/Residues.wav",
     sheetFiles: ["/compositions/residues/Residues.pdf"],
     sheetType: "pdf",
     featured: false
