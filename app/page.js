@@ -12,8 +12,11 @@ const projects = [
     image: "/uploads/fragments.jpg",
     awards: ["Best Music - Athens Film Festival", "Official Selection"],
     link: "https://filmfreeway.com/Kesit_",
-    soundcloud: null,
-    featured: true // This marks it as featured
+    // ── Add your files to public/compositions/fragments/ ──
+    wavFile: "/compositions/fragments/audio.wav",       // your .wav file
+    sheetFiles: ["/compositions/fragments/sheet.pdf"],  // PDF  — or use JPGs: ["sheet-p1.jpg","sheet-p2.jpg"]
+    sheetType: "pdf",                                   // "pdf" or "jpg"
+    featured: true
   },
   {
     id: 2,
@@ -35,6 +38,10 @@ const projects = [
     image: "/uploads/carbondale.jpeg",
     awards: [],
     link: "https://soundcloud.com/ozan-417880832/carbondale-short-film-soundtrack",
+    // To add audio+sheets here too, uncomment and fill in:
+    // wavFile: "/compositions/carbondale/audio.wav",
+    // sheetFiles: ["/compositions/carbondale/sheet.pdf"],
+    // sheetType: "pdf",
     soundcloud: null
   }
 ]

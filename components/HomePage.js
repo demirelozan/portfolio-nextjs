@@ -3,9 +3,11 @@
 import { useEffect, useState } from 'react'
 import AboutSection from './AboutSection'
 import ContactSection from './ContactSection'
+import CompositionModal from './CompositionModal'
 
 export default function HomePage({ projects = [], gallery = [], settings = {} }) {
   const [filter, setFilter] = useState('all')
+  const [activeComposition, setActiveComposition] = useState(null)
 
 // sort + filter the incoming projects for the grid
 const sortedProjects = [...projects].sort((a, b) => {
@@ -35,9 +37,13 @@ const filteredProjects = sortedProjects.filter(
   }, [])
 
 
-  // Handle card click to redirect to external URL
-  const handleCardClick = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer')
+  // Handle card click — open modal if project has audio/sheets, else open external link
+  const handleCardClick = (project) => {
+    if (project.wavFile || (project.sheetFiles && project.sheetFiles.length > 0)) {
+      setActiveComposition(project)
+    } else if (project.link) {
+      window.open(project.link, '_blank', 'noopener,noreferrer')
+    }
   }
   
   return (
@@ -145,7 +151,7 @@ const filteredProjects = sortedProjects.filter(
             <div 
               key={project.id} 
               className={`project-card ${project.featured ? 'featured' : ''}`}
-              onClick={() => handleCardClick(project.link)}
+              onClick={() => handleCardClick(project)}
               style={{ cursor: 'pointer' }}
             >
               <div className="project-image-wrapper">
@@ -156,6 +162,12 @@ const filteredProjects = sortedProjects.filter(
                 />
                 {project.featured && (
                   <div className="featured-badge">Featured</div>
+                )}
+                {(project.wavFile || (project.sheetFiles && project.sheetFiles.length > 0)) && (
+                  <div className="composition-badge">
+                    {project.wavFile && <span>♪</span>}
+                    {project.sheetFiles && project.sheetFiles.length > 0 && <span>♩</span>}
+                  </div>
                 )}
               </div>
               <div className="project-info">
@@ -172,16 +184,45 @@ const filteredProjects = sortedProjects.filter(
                     ))}
                   </div>
                 )}
-                <span className="view-project">View Project →</span>
+                <span className="view-project">
+                  {(project.wavFile || (project.sheetFiles && project.sheetFiles.length > 0))
+                    ? 'Listen & View Score →'
+                    : 'View Project →'
+                  }
+                </span>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* NEW: about + contact */}
       <AboutSection />
       <ContactSection />
+
+      {activeComposition && (
+        <CompositionModal
+          project={activeComposition}
+          onClose={() => setActiveComposition(null)}
+        />
+      )}
+
+      <style>{`
+        .composition-badge {
+          position: absolute;
+          top: 0.6rem;
+          right: 0.6rem;
+          background: rgba(245, 158, 11, 0.9);
+          color: #0A0A0A;
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0.2rem 0.5rem;
+          border-radius: 6px;
+          display: flex;
+          gap: 0.25rem;
+          letter-spacing: 0.05em;
+          backdrop-filter: blur(4px);
+        }
+      `}</style>
 
       <footer>
         <p>&copy; 2025 {settings.title}. All rights reserved.</p>
