@@ -6,7 +6,7 @@ const projects = [
     title: "Embers",
     category: "concert",
     year: "2026",
-    description: "Embers— A film music made for possibly end of show final scene. Combining oboe, piano and strings. Something quiet catches, grows, burns through the orchestra, then falls back to embers.",
+    description: "Embers: A film music I made imagining a end of show/final or a battle scene. Combining oboe, piano and strings. Something quiet catches, grows, burns through the orchestra, then falls back to embers.",
     image: "/compositions/embers/cover.png",
     awards: [],
     link: null,
