@@ -14,7 +14,7 @@ const projects = [
     sheetFiles: ["/compositions/embers/Embers.pdf"],
     sheetType: "pdf",
     featured: true
-  }
+  },
   {
     id: 2,
     title: "Residues",
@@ -28,7 +28,7 @@ const projects = [
     sheetFiles: ["/compositions/residues/Residues.pdf"],
     sheetType: "pdf",
     featured: false
-  }
+  },
   // Featured project - Fragments
   {
     id: 3,
@@ -39,14 +39,9 @@ const projects = [
     image: "/uploads/fragments.jpg",
     awards: ["Best Music - Athens Film Festival", "Official Selection"],
     link: "https://vimeo.com/1148621700",
-    // Place your files at:
-    //   public/compositions/fragments/audio.wav
-    //   public/compositions/fragments/sheet.pdf
     sheetType: "pdf",
     featured: false
   },
-  // Residues — standalone concert piece
-,
   {
     id: 4,
     title: "The Interface",
