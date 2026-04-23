@@ -1,9 +1,37 @@
 import HomePage from '../components/HomePage'
 
 const projects = [
-  // Featured project - Fragments
   {
     id: 1,
+    title: "Embers",
+    category: "concert",
+    year: "2026",
+    description: "Embers— A film music made for possibly end of show final scene. Combining oboe, piano and strings. Something quiet catches, grows, burns through the orchestra, then falls back to embers.",
+    image: "/compositions/embers/cover.jpg",
+    awards: [],
+    link: null,
+    wavFile: "/compositions/embers/Embers.wav",
+    sheetFiles: ["/compositions/embers/Embers.pdf"],
+    sheetType: "pdf",
+    featured: true
+  }
+  {
+    id: 2,
+    title: "Residues",
+    category: "concert",
+    year: "2026",
+    description: "Chamber composition for upright piano, two violins, viola, violoncello, and contrabass. An introspective piece exploring texture and silence.",
+    image: "/compositions/residues/cover.jpg",
+    awards: [],
+    link: null,
+    wavFile: "/compositions/residues/Residues.wav",
+    sheetFiles: ["/compositions/residues/Residues.pdf"],
+    sheetType: "pdf",
+    featured: false
+  }
+  // Featured project - Fragments
+  {
+    id: 3,
     title: "Fragments (Kesit)",
     category: "film",
     year: "2025",
@@ -15,30 +43,12 @@ const projects = [
     //   public/compositions/fragments/audio.wav
     //   public/compositions/fragments/sheet.pdf
     sheetType: "pdf",
-    featured: true
-  },
-  // Residues — standalone concert piece
-  {
-    id: 4,
-    title: "Residues",
-    category: "concert",
-    year: "2026",
-    description: "Chamber composition for upright piano, two violins, viola, violoncello, and contrabass. An introspective piece exploring texture and silence.",
-    // Place your cover image at: public/compositions/residues/cover.jpg
-    // (export page 1 of the PDF as a JPG and put it here)
-    image: "/compositions/residues/cover.jpg",
-    awards: [],
-    link: null,
-    // Place your files at:
-    //   public/compositions/residues/Residues.wav
-    //   public/compositions/residues/Residues.pdf
-    wavFile: "/compositions/residues/Residues.wav",
-    sheetFiles: ["/compositions/residues/Residues.pdf"],
-    sheetType: "pdf",
     featured: false
   },
+  // Residues — standalone concert piece
+,
   {
-    id: 2,
+    id: 4,
     title: "The Interface",
     category: "game",
     year: "2022",
@@ -48,7 +58,7 @@ const projects = [
     link: "https://soundcloud.com/ozan-417880832/sets/interface-game-soundtracks",
   },
   {
-    id: 3,
+    id: 5,
     title: "Carbondale",
     category: "film",
     year: "2023",
