@@ -18,6 +18,5 @@
     "react-dom": "18.x",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
-  },
-  "engines": { "node": ">=18" }
+  }
 }
