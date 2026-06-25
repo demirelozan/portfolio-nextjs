@@ -1,31 +1,33 @@
-import { notFound } from 'next/navigation'
-import { getProjectBySlug, projects } from '../../lib/projects'
-import CompositionPage from '../../components/CompositionPage'
+import HomePage from '../components/HomePage'
+import { projects } from '../lib/projects'
 
-// Tell Next.js which slugs to pre-render at build time
-export function generateStaticParams() {
-  return projects
-    .filter(p => p.slug)
-    .map(p => ({ slug: p.slug }))
-}
-
-// Generate <title> and <meta> tags for each page
-export function generateMetadata({ params }) {
-  const project = getProjectBySlug(params.slug)
-  if (!project) return { title: 'Not Found' }
-  return {
-    title: `${project.title} — Ozan Demirel`,
-    description: project.description,
-    openGraph: {
-      title: project.title,
-      description: project.description,
-      images: project.image ? [{ url: project.image }] : [],
-    }
+const gallery = [
+  {
+    title: "Studio Session",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=500&fit=crop",
+    description: "Recording session"
+  },
+  {
+    title: "Live Performance",
+    image: "https://i.imgur.com/JYoqcZb.jpeg",
+    description: "Live performance"
+  },
+  {
+    title: "Studio Setup",
+    image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=1200&h=500&fit=crop",
+    description: "My creative workspace"
   }
+]
+
+const settings = {
+  title: "Ozan Demirel",
+  profileImage: "https://i.imgur.com/scMnEuD.jpeg",
+  bio: "Film & Media Composer",
+  soundcloud: "https://soundcloud.com/ozan-417880832",
+  instagram: "https://instagram.com/ozandemirl",
+  email: "info@ozandemirel.me"
 }
 
-export default function SlugPage({ params }) {
-  const project = getProjectBySlug(params.slug)
-  if (!project) notFound()
-  return <CompositionPage project={project} />
+export default function Home() {
+  return <HomePage projects={projects} gallery={gallery} settings={settings} />
 }
